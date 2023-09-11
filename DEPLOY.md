@@ -1,7 +1,10 @@
 # npm
 
-update version in package.json
-yarn clean
+1. update version in package.json
+2. Execute the below code in a terminal
+
+```bash
+yarn clean  
 yarn install
 yarn build
 yarn copy # for docs to build
@@ -10,11 +13,13 @@ git tag version
 git push commit & tags
 npm login # last time i tried, yarn wasn't working for login & publish
 npm publish
+```
 
 # pypi
 
-after the above
+1. After the above, execute the following
 
+```bash
 cd py
 pip install -U pip setuptools wheel twine
 rm -rf dist build
@@ -23,12 +28,14 @@ twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 cd ~/new-directory
 virtualenv env
 source env/bin/activate
-python -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple "escher==<version>"
+python -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple "
+escher==<version>"
 python -m ipython kernel install --user --name=env
 ipython, jupyter, etc.
 cd -
 deactivate
 twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+```
 
 # Docs
 
